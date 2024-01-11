@@ -5,6 +5,16 @@ html {
   --secondary-font: "Rubik", sans-serif;
 }
 
+input:focus {
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+select:focus {
+  outline-color: none !important;
+  box-shadow: none !important;
+}
+
 .product-hero-wrapper {
   width: 100vw;
   height: 420px;
@@ -48,15 +58,27 @@ html {
 .product-filter-wrapper {
   /* margin-block-start: -75px !important; */
   z-index: 2;
-  background: #fff;
+  position: absolute;
+  width: 100%;
+  top: 40%;
 }
-.product-filter-wrapper .filter-box-wrapper {
+
+.filter-container {
+  box-shadow: 2px 15px 15px #eff3ffb9;
+  border: 1px solid #fcfcfc;
+}
+.product-filter-wrapper .product-filter-wrapper .filter-box-wrapper {
   margin: auto;
   width: 100%;
 }
 .product-filter-wrapper .filter-box-wrapper h2 {
   font-size: 22px;
   font-weight: 600;
+}
+
+.product-filter-wrapper .filter-box select {
+  border-radius: 2px !important;
+  padding: 10px !important;
 }
 
 @media (max-width: 1200px) {
@@ -81,4 +103,8 @@ html {
   .product-filter-wrapper .filter-box-wrapper .filter-box .form-select {
     width: 100% !important;
   }
+}
+
+.product-grid-wrapper {
+  margin-top: 100px;
 }
