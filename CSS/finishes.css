@@ -1,0 +1,52 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Rubik:wght@300;400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+.product-hero-wrapper {
+  max-width: 100%;
+}
+
+.finish_wrap_content {
+  padding: 35px 0;
+}
+
+.finish_wrap_heading_content {
+  text-align: center;
+  padding-bottom: 30px;
+}
+.finish_wrap_heading_content .f_wrap_title {
+  font-weight: 600;
+  font-size: 45px;
+}
+.finish_wrap_heading_content .f_wrap_subtitle {
+  color: #4e5d78;
+  font-size: 16px;
+}
+
+.finish-wrap-box {
+  width: 100%;
+}
+
+.finish-content-box img {
+  width: 100%;
+}
+.finish-wrap-box .finish-b-content {
+  padding: 15px 0;
+}
+.finish-wrap-box .finish-b-content h4 {
+  text-align: center;
+  font-size: 18px;
+}
+
+.finish-wrap-box:hover .finish-b-content {
+  background-color: #fff;
+  box-shadow: 0px 12px 20px #dcecf3;
+  transition: all 0.3s ease;
+}
+.finish-wrap-box:hover .finish-b-content-box {
+  border: 1px solid #2baae2;
+}
