@@ -1,0 +1,67 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none !important;
+}
+
+.colors-wrap-container {
+  margin-top: 100px;
+}
+
+.product-breadcrumb-box a {
+  color: #fff;
+}
+.colors-content-box {
+  transition: all 0.4s;
+  border: 1px solid #2babe200;
+}
+.colors-content-box img {
+  max-width: 100%;
+}
+.colors-wrap-box {
+  position: relative;
+  transition: all 03s ease;
+}
+.colors-batch {
+  position: absolute;
+}
+.colors-batch p {
+  background-color: #2baae2;
+  width: max-content;
+  color: #fff;
+  padding: 5px 20px;
+}
+
+.color-b-content {
+  padding: 15px 20px;
+}
+.color-b-content h4 {
+  text-align: center;
+}
+
+.color-downloadbtn {
+  color: #2baae2;
+  border: 1px solid #2baae2;
+  padding: 20px 30px 20px 30px;
+  display: block;
+  width: 100%;
+  background: #fff;
+  transition: all 0.4s ease;
+  font-weight: 600;
+}
+.color-downloadbtn:hover {
+  background: #2baae2;
+  color: #fff;
+}
+.colors-wrap-box:hover .color-b-content {
+  background-color: #fff;
+  box-shadow: 0px 12px 20px #dcecf3;
+  transition: all 0.3s ease;
+}
+.colors-wrap-box:hover .colors-content-box {
+  border: 1px solid #2baae2;
+}
