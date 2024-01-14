@@ -56,7 +56,7 @@
 }
 
 /* single-product-slider-content */
-.single-product-slider-content {
+.single-product-slider .single-product-slider-content {
   position: absolute;
   z-index: 100;
   width: 320px;
@@ -66,13 +66,16 @@
   background: rgba(0, 0, 0, 0.5);
   padding: 10px 5px;
 }
-.single-product-slider-content .thumbnails {
+.single-product-slider .single-product-slider-content .thumbnails,
+.tab-content .single-product-slider-content .thumbnails{
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+
   gap: 0.5rem;
 }
-.single-product-slider-content .thumbnails .item img {
+.single-product-slider .single-product-slider-content .thumbnails .item img,
+.tab-content .single-product-slider-content .thumbnails .item img
+ {
   width: 150px;
   height: 135px;
   background: #000;
@@ -81,7 +84,9 @@
   bottom: 10px;
 }
 
-.single-product-slider-content .slider-content-box .slider-title {
+.single-product-slider .single-product-slider-content .slider-content-box .slider-title,
+.tab-content .single-product-slider-content .slider-content-box .slider-title
+{
   display: flex;
   align-items: center;
   gap: 5px;
@@ -90,15 +95,21 @@
   padding: 10px;
   border-bottom: 1px solid #636363;
 }
-.single-product-slider-content .slider-content-box .slider-title h1 {
+.single-product-slider .single-product-slider-content .slider-content-box .slider-title h1,
+.tab-content .single-product-slider-content .slider-content-box .slider-title h1
+ {
   font-weight: 300;
   font-size: 22px;
   margin: 0;
 }
-.single-product-slider-content .slider-content-box .slider-title span {
+.single-product-slider .single-product-slider-content .slider-content-box .slider-title span,
+.tab-content .single-product-slider-content .slider-content-box .slider-title span
+ {
   color: #00b0f0;
 }
-.single-product-slider-content .slider-content-box .slider-title p {
+ .single-product-slider .single-product-slider-content .slider-content-box .slider-title p,
+ .tab-content .single-product-slider-content .slider-content-box .slider-title p
+ {
   margin: 0;
   font-weight: 600;
   font-size: 19px;
@@ -508,3 +519,28 @@ input:checked + .slider:before {
 }
 
 /* ==========responsive========== */
+@media (max-width: 1200px) { 
+  .single-product-details .custom-tab {
+    padding:0 5%;
+
+  }
+
+  .configur-left-box .config-save-inner,
+  .config-expand .config-expand-inner,
+  .configur-left-box .config-accordion .config-accordion-inner {
+
+    width: 100%;
+
+  }
+  .single-product-slider .single-product-slider-content{
+    display: none;
+  }
+  .single-product-details .nav-tabs {
+    padding:0 5%;
+
+}
+.single-product-slider {
+  height: 50vh;
+
+}
+}
