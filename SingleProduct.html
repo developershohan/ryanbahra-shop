@@ -103,7 +103,7 @@
               class="nav-link active"
               id="nav-home-tab"
               data-bs-toggle="tab"
-              data-bs-target="#nav-home"
+              data-bs-target="#quick-fact"
               type="button"
               role="tab"
               aria-controls="nav-home"
@@ -113,12 +113,12 @@
             </button>
             <button
               class="nav-link"
-              id="nav-profile-tab"
+              id="config-tab"
               data-bs-toggle="tab"
-              data-bs-target="#nav-profile"
+              data-bs-target="#config"
               type="button"
               role="tab"
-              aria-controls="nav-profile"
+              aria-controls="config"
               aria-selected="false"
             >
               Configure
@@ -137,24 +137,24 @@
             </button>
             <button
               class="nav-link"
-              id="nav-contact-tab"
+              id="accordion-note-tab"
               data-bs-toggle="tab"
-              data-bs-target="#nav-contact"
+              data-bs-target="#accordion-note"
               type="button"
               role="tab"
-              aria-controls="nav-contact"
+              aria-controls="accordion-note"
               aria-selected="false"
             >
               Notes
             </button>
             <button
               class="nav-link"
-              id="nav-contact-tab"
+              id="download-tab"
               data-bs-toggle="tab"
-              data-bs-target="#nav-contact"
+              data-bs-target="#download"
               type="button"
               role="tab"
-              aria-controls="nav-contact"
+              aria-controls="download"
               aria-selected="false"
             >
               Downloads
@@ -162,17 +162,26 @@
           </div>
         </nav>
         <div class="tab-content" id="nav-tabContent">
+          <!-- Quick Facts tab -->
+          <div
+            class="tab-pane fade custom-tab show active"
+            id="quick-fact"
+            role="tabpanel"
+            aria-labelledby="nav-profile-tab"
+          >
+            asdfdsf
+          </div>
           <!-- configure tab -->
           <div
-            class="tab-pane fade show active"
-            id="nav-home"
+            class="tab-pane fade custom-tab"
+            id="config"
             role="tabpanel"
             aria-labelledby="nav-home-tab"
           >
             <div class="container-fluid m-0 p-0">
               <div class="row">
                 <div class="col-md-8">
-                  <div class="configure-left">
+                  <div class="configure-left px-4">
                     <div class="configur-left-box">
                       <!-- Login Notice -->
                       <div class="config-login">
@@ -273,7 +282,22 @@
                               </div>
                             </div>
                           </div>
-                          <a href="#" data-rel="1" id="extend-all-btn">Expand All</a>
+                          <a
+                            id="expandAllButton"
+                            class="expandAllbtn"
+                            onclick="expandAll()"
+                          >
+                            Expand All
+                            <img src="./Images/expand.png" alt="" />
+                          </a>
+                          <a
+                            id="collapseAllButton"
+                            class="collapseAllBtn"
+                            onclick="collapseAll()"
+                          >
+                            Collapse All
+                            <img src="./Images/expand.png" alt="" />
+                          </a>
                         </div>
                       </div>
                       <!-- config-accordion -->
@@ -286,7 +310,7 @@
                                   class="accordion-button"
                                   type="button"
                                   data-bs-toggle="collapse"
-                                  data-bs-target="#collapseOne"
+                                  data-bs-target="#collapseOne "
                                   aria-expanded="true"
                                   aria-controls="collapseOne"
                                 >
@@ -492,46 +516,108 @@
                   </div>
                 </div>
                 <div class="col-md-4">
-                  <div class="configure-right">asdf</div>
+                  <div class="configure-right px-4">
+                    <div class="config-right-box d-flex flex-column gap-2">
+                      <button class="btn btn-danger">
+                        PRINT CONFIGURATION
+                      </button>
+                      <button class="btn btn-danger">SAVE CONFIGURATION</button>
+                      <button class="btn btn-danger">
+                        SHARE CONFIGURATION
+                      </button>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-          <!-- Quick Facts tab -->
-          <div
-            class="tab-pane fade"
-            id="nav-profile"
-            role="tabpanel"
-            aria-labelledby="nav-profile-tab"
-          >
-            asdfdsf
-          </div>
+
           <!-- Specifications tab -->
           <div
-            class="tab-pane fade"
+            class="tab-pane fade custom-tab"
             id="nav-contact"
             role="tabpanel"
             aria-labelledby="nav-contact-tab"
           >
-            ...
+            <div class="specifications-tab">
+              <div class="container">
+                <div class="row">
+                  <div class="col-12 d-flex justify-content-center w-100">
+                    <a href="#"
+                      ><button class="btn btn-dark specifications-btn">
+                        Share
+                      </button></a
+                    >
+                    <!-- share modal -->
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
           <!--Notes tab  -->
           <div
-            class="tab-pane fade"
-            id="nav-contact"
+            class="tab-pane fade custom-tab"
+            id="accordion-note"
             role="tabpanel"
-            aria-labelledby="nav-contact-tab"
+            aria-labelledby="accordion-note-tab"
           >
             ...
           </div>
           <!-- Downloads tab  -->
           <div
-            class="tab-pane fade"
-            id="nav-contact"
+            class="tab-pane fade custom-tab"
+            id="download"
             role="tabpanel"
-            aria-labelledby="nav-contact-tab"
+            aria-labelledby="download-tab"
           >
-            ...
+            <div class="download-tab">
+              <div class="container">
+                <div class="row">
+                  <div class="col-sm-6 col-lg-4 col-12 px-3 py-2">
+                    <div class="download-files">
+                      <label>Photometrics</label>
+                      <div class="data-files">
+                        <ul>
+                          <li><a href="">asdf</a></li>
+                          <li><a href="">asdf</a></li>
+                          <li><a href="">asdf</a></li>
+                          <li><a href="">asdf</a></li>
+                          <li><a href="">asdf</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-sm-6 col-lg-4 col-12 px-3 py-2">
+                    <div class="download-files">
+                      <label>Photometrics</label>
+                      <div class="data-files">
+                        <ul>
+                          <li><a href="">asdf</a></li>
+                          <li><a href="">asdf</a></li>
+                          <li><a href="">asdf</a></li>
+                          <li><a href="">asdf</a></li>
+                          <li><a href="">asdf</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-sm-6 col-lg-4 col-12 px-3 py-2">
+                    <div class="download-files">
+                      <label>Photometrics</label>
+                      <div class="data-files">
+                        <ul>
+                          <li><a href="">asdf</a></li>
+                          <li><a href="">asdf</a></li>
+                          <li><a href="">asdf</a></li>
+                          <li><a href="">asdf</a></li>
+                          <li><a href="">asdf</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>

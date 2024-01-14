@@ -201,7 +201,7 @@
 .configur-left-box .config-expand,
 .configur-left-box .config-accordion {
   display: flex;
-  justify-content: end;
+  /* justify-content: end; */
   margin-top: 20px;
 }
 .configur-left-box .config-save-inner {
@@ -342,6 +342,10 @@ input:checked + .slider:before {
 }
 
 /* =========config accordion============= */
+.single-product-details .custom-tab {
+  padding-left: 10%;
+  color: #fff;
+}
 .config-accordion .accordion-item,
 .config-accordion .accordion-button,
 .config-accordion .accordion-button:not(.collapsed),
@@ -352,6 +356,9 @@ input:checked + .slider:before {
   outline: 0;
   box-shadow: none;
   border-radius: 0;
+}
+.config-accordion .accordion-item:hover .accordion-header {
+  background: rgba(0, 0, 0, 0.3);
 }
 .config-accordion .accordion-button::after {
   display: none;
@@ -399,3 +406,105 @@ input:checked + .slider:before {
   color: #fff;
   margin-left: 20px;
 }
+
+.config-expand-inner .collapseAllBtn {
+  display: none;
+}
+
+.config-expand-inner .collapseAllBtn,
+.config-expand-inner .expandAllbtn {
+  text-decoration: none;
+  color: #a3a3a3;
+  cursor: pointer;
+}
+.config-expand-inner .collapseAllBtn:hover,
+.config-expand-inner .expandAllbtn:hover {
+  color: #fff;
+}
+
+/* config-right-box */
+.config-right-box button {
+  background: #5c5c5c;
+  border: none;
+  border-radius: 0;
+  width: 60%;
+}
+.config-right-box button:hover {
+  background: #00b0f0;
+}
+
+/* single-product-details tab  */
+.single-product-details .nav-link {
+  background: #323232;
+  color: #fff;
+  border-radius: 0;
+  border-left: 1px solid #a3a3a3;
+  border-top: 1px solid #a3a3a3;
+  width: 190px;
+  padding: 20px;
+}
+.single-product-details .nav-link {
+  background: linear-gradient(#252525, #252525 50%, #00b0f0 50%, #00b0f0);
+  background-size: 100% 200%;
+
+  transition: background 0.5s;
+}
+
+.single-product-details .nav-link:hover {
+  border-bottom: 0;
+  border-left: 1px solid #a3a3a3;
+  border-top: 1px solid #a3a3a3;
+  background-position: 100% 100%;
+}
+.single-product-details .nav-tabs {
+  padding-left: 10%;
+  background: #424242;
+  border-bottom: 10px solid #00b0f0;
+}
+.single-product-details .nav-link.active {
+  background: #00b0f0;
+  color: #fff;
+  border-radius: 0;
+  border: none;
+}
+
+/* specifications-tab */
+.specifications-tab .specifications-btn {
+  width: 200px;
+  text-align: center;
+  padding: 10px 0;
+  margin: 0 auto;
+  background-color: #000;
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  border-radius: 0;
+}
+.specifications-tab .specifications-tab {
+  z-index: 99999999999999999999999999 !important;
+}
+
+/* download tab */
+.download-tab .download-files label {
+  font-size: 20px;
+}
+.download-tab .download-files .data-files {
+  margin-top: 15px;
+}
+.download-tab .download-files .data-files ul {
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.download-tab .download-files .data-files ul li {
+  list-style: none;
+  border-bottom: 1px solid #a3a3a3;
+}
+.download-tab .download-files .data-files ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 18px;
+}
+
+/* ==========responsive========== */

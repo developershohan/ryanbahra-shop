@@ -100,6 +100,33 @@ accordionItems.forEach(item => {
 
 
 
+const expandAllButton = document.getElementById('expandAllButton');
+const collapseAllButton = document.getElementById('collapseAllButton');
+
+// Add click event listeners to buttons
+expandAllButton.addEventListener('click', expandAll);
+collapseAllButton.addEventListener('click', collapseAll);
+
+// Function to expand all accordion items
+function expandAll() {
+    const accordionItems = document.querySelectorAll('.accordion-collapse');
+    accordionItems.forEach(item => {
+        item.classList.add('show');
+    });
+    expandAllButton.style.display = "none"
+    collapseAllButton.style.display = "block"
+}
+
+// Function to collapse all accordion items
+function collapseAll() {
+    const accordionItems = document.querySelectorAll('.accordion-collapse');
+    accordionItems.forEach(item => {
+        item.classList.remove('show');
+    });
+    expandAllButton.style.display = "block"
+    collapseAllButton.style.display = "none"
+}
+
 
 // $(function(){
 //     $('#datepicker').datepicker();
